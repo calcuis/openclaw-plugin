@@ -1,0 +1,52 @@
+<idea-plugin>
+    <id>com.github.gguf.openclaw</id>
+    <name>OpenClaw</name>
+    <version>0.3.7</version>
+    <vendor url="https://github.com/mochiyaki/claw">gguf</vendor>
+
+    <description><![CDATA[
+        <p>OpenClaw adds a status bar launcher for the OpenClaw CLI inside JetBrains IDEs.</p>
+        <h3>Features</h3>
+        <ul>
+            <li>OpenClaw menu from the status bar or <b>Tools → OpenClaw: Show Menu</b></li>
+            <li>Run dashboard, setup, gateway, doctor, console, and terminal commands in integrated terminals</li>
+            <li>Windows WSL support for OpenClaw commands</li>
+            <li>Package checker for installing or updating the OpenClaw npm package</li>
+            <li>Pairing dialog for approving OpenClaw app pairing codes</li>
+            <li>Optional startup status check from <b>Settings → Tools → OpenClaw</b></li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li><b>0.3.7</b> — JetBrains Marketplace-ready port of the OpenClaw VS Code extension.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.terminal</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.github.gguf.openclaw.OpenClawSettingsState"/>
+        <applicationConfigurable
+            instance="com.github.gguf.openclaw.OpenClawSettingsConfigurable"
+            displayName="OpenClaw"
+            id="com.github.gguf.openclaw.settings"
+            parentId="tools"/>
+        <statusBarWidgetFactory
+            implementation="com.github.gguf.openclaw.OpenClawStatusBarWidgetFactory"
+            id="OpenClawStatusBarWidget"
+            order="last"/>
+        <postStartupActivity implementation="com.github.gguf.openclaw.OpenClawStartupActivity"/>
+    </extensions>
+
+    <actions>
+        <action
+            id="OpenClaw.ShowMenu"
+            class="com.github.gguf.openclaw.ShowOpenClawMenuAction"
+            text="OpenClaw: Show Menu"
+            description="Show the OpenClaw command menu">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
