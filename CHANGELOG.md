@@ -1,0 +1,79 @@
+# Change Log
+
+All notable changes to the "claw" and/or "openclaw" extension will be documented in this file.
+
+## Releases
+- 0.3.7
+  - rename checker to check; rename launcher to panel; for a nicer display
+- 0.3.6
+  - keep the dashboard option; rename launch to launcher
+- 0.3.5
+  - replace the dashboard button with a new launch button with automation attempt
+- 0.3.4
+  - use "curl -fsSL https://openclaw.ai/install.sh | bash" instead of "npm install -g openclaw" for fixing installation issues on wsl
+- 0.3.3
+  - add fix button under setup for applying fixes
+- 0.3.2
+  - add doctor button under setup to help migration from clawdbot/moltbot or/and fix issue(s)
+- 0.3.1
+  - wsl note and doc update
+- 0.3.0
+  - add console button under setup for linux/ubuntu inference
+- 0.2.9
+  - pair up plus doc update
+- 0.2.8
+  - new setup button/schema with onboard and pairing device/apps
+- 0.2.7
+  - new pop up menu with more options for gateway
+- 0.2.6
+  - re-name checker to check (revoked in 0.2.7)
+- 0.2.5
+  - stop gateway button
+- 0.2.4
+  - handle pre-release version logic for checker
+- 0.2.3
+  - minor adjustment
+- 0.2.2
+  - clear and update doc
+- 0.2.1
+  - wsl instruction/note added
+- 0.2.0
+  - clean up unused code and update doc
+- 0.1.9
+  - attempt to use gif
+- 0.1.8
+  - doc and logic updated
+- 0.1.7
+  - openclaw package checker
+- 0.1.6
+  - guess the keyword is not necessary
+- 0.1.5
+  - new demo showing the magnet on status bar
+- 0.1.4
+  - please update gguf-connector for macos support; docs revised
+- 0.1.3
+  - new terminal session for ggc oc
+- 0.1.2
+  - magnet icon and theme
+- 0.1.1
+  - docs refinement
+- 0.1.0
+  - use ggc oc for responsive tui
+- 0.0.9
+  - minor adjustment
+- 0.0.8
+  - re-name to claw
+- 0.0.7
+  - more examples included
+- 0.0.6
+  - terminal ui button added
+- 0.0.5
+  - demo and docs updated
+- 0.0.4
+  - re-structure as a menu selection scheme
+- 0.0.3
+  - CLI icon updated
+- 0.0.2
+  - ensure the wsl is selected for windows; bug fixed
+- 0.0.1
+  - initial release
