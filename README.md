@@ -2,6 +2,8 @@
 
 OpenClaw adds a status bar launcher for the OpenClaw CLI in JetBrains IDEs.
 
+![screenshot](https://raw.githubusercontent.com/calcuis/openclaw-plugin/master/demo.gif)
+
 ## Features
 
 - Status bar entry and `Tools -> OpenClaw: Show Menu` action
@@ -35,18 +37,6 @@ The Marketplace-ready ZIP is written to:
 
 ```text
 build/distributions/openclaw-0.3.7.zip
-```
-
-## Publish
-
-The Gradle configuration matches the working `wrap-plugin` and `gguf-editor-plugin` examples and reads Marketplace credentials from environment variables:
-
-```bash
-export PUBLISH_TOKEN=...
-export CERTIFICATE_CHAIN=...
-export PRIVATE_KEY=...
-export PRIVATE_KEY_PASSWORD=...
-./gradlew signPlugin publishPlugin
 ```
 
 ## License
